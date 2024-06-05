@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E3E4E6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #072635;
+  border-radius: 3px;
+}
+
+body {
+  overflow-x: hidden;
+  padding: 18px;
+  background-color: #F6F7F8;
+}
+body button {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  transition: 0.4s ease;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+body button:hover {
+  scale: 0.9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p {
+  color: #072635;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #FFF;
+  border-radius: 70px;
+  padding: 12px 32px;
+}
+nav img.logo {
+  position: relative;
+  max-width: 211px;
+  flex: 1 1 220px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+nav ul {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex: 1 1 740px;
+}
+nav ul li {
+  list-style: none;
+  display: inline-flex;
+  gap: 9px;
+  position: relative;
+  border-radius: 41px;
+  transition: 0.4s ease;
+  cursor: pointer;
+  padding: 11px 16px;
+  border: 2px solid transparent;
+}
+nav ul li span {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 800;
+  color: #072635;
+}
+nav ul li.active {
+  background-color: #01F0D0;
+}
+nav ul li:hover:not(.active) {
+  border: 2px solid #01F0D0;
+  scale: 0.98;
+}
+nav .right-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+nav .right-info .doc-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 19px;
+  padding-right: 12px;
+  border-right: 1px solid #EDEDED;
+}
+nav .right-info .doc-info img {
+  max-width: 44px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+nav .right-info .doc-info h6 {
+  position: relative;
+  font-size: 14px;
+  font-weight: 800;
+  color: #072635;
+}
+nav .right-info .doc-info span {
+  position: relative;
+  color: #707070;
+}
+nav .right-info button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+nav .right-info a {
+  text-decoration: none;
+}
+nav .right-info a:hover {
+  transition: 0.4s ease;
+  rotate: 20deg;
+}
+
+main {
+  position: relative;
+  display: grid;
+  margin: 32px 0px;
+  gap: 32px;
+  grid-template-columns: 367px 1fr;
+}
+main aside {
+  position: relative;
+  max-width: 367px;
+  background-color: #FFF;
+  border-radius: 16px;
+  padding: 20px 0px;
+  height: 100%;
+}
+main aside .search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  margin-bottom: 40px;
+}
+main aside .search h3 {
+  position: relative;
+  font-size: 24px;
+  line-height: 33px;
+  color: #072635;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 900;
+}
+main aside .list {
+  max-height: 100vh;
+  overflow-y: auto;
+  height: 100%;
+}
+main aside .list .list-item {
+  display: flex;
+  position: relative;
+  padding: 16px 20px;
+  max-width: 100%;
+  align-items: center;
+  gap: 12px;
+  transition: 0.4s ease;
+}
+main aside .list .list-item.active {
+  background-color: #D8FCF7;
+}
+main aside .list .list-item:hover {
+  background-color: #D8FCF7;
+}
+main aside .list .list-item img {
+  position: relative;
+  max-width: 48px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main aside .list .list-item .details h6 {
+  font-size: 14px;
+  line-height: 19px;
+  color: #072635;
+  font-weight: 800;
+}
+main aside .list .list-item .details p {
+  color: #707070;
+  font-size: 14px;
+  line-height: 19px;
+}
+main aside .list .list-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+main aside .list .list-item button {
+  rotate: 90deg;
+  position: relative;
+  margin-left: auto;
+}
+main section {
+  position: relative;
+  display: flex;
+  gap: 33px;
+  flex-wrap: wrap;
+}
+main section .main-container {
+  position: relative;
+  flex: 1 1 760px;
+}
+main section .main-container .data {
+  position: relative;
+  border-radius: 16px;
+  background-color: #fff;
+  margin-bottom: 32px;
+  padding: 20px;
+}
+main section .main-container .data h3 {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+main section .main-container .data .chart {
+  position: relative;
+  background-color: #F4F0FE;
+  border-radius: 12px;
+  gap: 30px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+}
+main section .main-container .data .chart h3 {
+  position: relative;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+}
+main section .main-container .data .chart canvas {
+  max-width: 700px;
+  width: 100% !important;
+  height: auto !important;
+}
+main section .main-container .data .chart .custom-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+main section .main-container .data .chart .custom-legend .item {
+  padding: 16px 0px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main section .main-container .data .chart .custom-legend .item:first-child {
+  border-bottom: 1px solid #CBC8D4;
+}
+main section .main-container .data .chart .custom-legend .item .color-box {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  display: inline-block;
+  margin-right: 4px;
+}
+main section .main-container .data .chart .custom-legend .item .label {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 800;
+  display: inline-block;
+}
+main section .main-container .data .chart .custom-legend .item .value {
+  display: block;
+  margin: 8px 0px;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 800;
+}
+main section .main-container .data .chart .custom-legend .item .indicator {
+  margin-left: 4px;
+  font-size: 0.8em;
+}
+main section .main-container .data .vals {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(226px, 1fr));
+  gap: 21px;
+}
+main section .main-container .data .vals > div {
+  border-radius: 12px;
+  padding: 16px;
+}
+main section .main-container .data .vals > div img {
+  position: relative;
+  display: block;
+  max-width: 96px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 16px;
+}
+main section .main-container .data .vals > div h4 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+main section .main-container .data .vals > div > span {
+  font-size: 30px;
+  line-height: 41px;
+  font-weight: 900;
+  margin-bottom: 17px;
+  color: #072635;
+}
+main section .main-container .data .vals > div p {
+  font-size: 14px;
+  line-height: 19px;
+}
+main section .main-container .data .vals > div:first-child {
+  background-color: #E0F3FA;
+}
+main section .main-container .data .vals > div:nth-child(2) {
+  background-color: #FFE6E9;
+}
+main section .main-container .data .vals > div:last-child {
+  background-color: #FFE6F1;
+}
+main section .right-sec {
+  position: relative;
+  flex: 1 1 367px;
+  padding: 32px 20px;
+  border-radius: 16px;
+  background-color: #FFF;
+  max-width: 367px;
+}
+main section .right-sec .info .profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+main section .right-sec .info .profile > img {
+  width: 200px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  display: block;
+}
+main section .right-sec .info .profile h3 {
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  font-weight: 900;
+}
+main section .right-sec .info .details {
+  position: relative;
+  margin-bottom: 40px;
+}
+main section .right-sec .info .details > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+main section .right-sec .info .details > div:not(:last-child) {
+  margin-bottom: 24px;
+}
+main section .right-sec .info .details > div img {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main section .right-sec .info .details > div div h6 {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+}
+main section .right-sec .info .details > div div p {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 800;
+}
+main section .right-sec .info button {
+  position: relative;
+  display: block;
+  margin-inline: auto;
+  border-radius: 41px;
+  background-color: #01F0D0;
+  color: #072635;
+  padding: 11px;
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 800;
+}/*# sourceMappingURL=style.css.map */

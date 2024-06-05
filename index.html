@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech.Care</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js" async></script>
+</head>
+
+<body>
+    <nav>
+        <img src="./images/TestLogo.svg" alt="Tech Care Logo" class="logo">
+        <ul class="nav">
+            <li class="nav-item">
+                <img src="./images/home-icon.svg" alt="">
+                <span>Overview</span>
+            </li>
+            <li class="nav-item active">
+                <img src="./images/patients-icon.svg" alt="">
+                <span>Patients</span>
+            </li>
+            <li class="nav-item">
+                <img src="./images/schedule-icon.svg" alt="">
+                <span>Schedule</span>
+            </li>
+            <li class="nav-item">
+                <img src="./images/message-icon.svg" alt="">
+                <span>Message</span>
+            </li>
+            <li class="nav-item">
+                <img src="./images/transaction-icon.svg" alt="">
+                <span>Transactions</span>
+            </li>
+        </ul>
+        <div class="right-info">
+            <div class="doc-info">
+                <img src="./images/doc-profile.png" alt="">
+                <div>
+                    <h6>Dr. Jose Simmons</h6>
+                    <span>General Practitioner</span>
+                </div>
+            </div>
+            <a href="#"><img src="./images/settings-icon.svg" alt=""></a>
+            <button><img src="./images/more-icon.svg" alt=""></button>
+        </div>
+    </nav>
+    <main>
+        <aside>
+            <div class="search">
+                <h3>Patients</h3>
+                <button>
+                    <img src="./images/search-icon.svg" alt="">
+                </button>
+            </div>
+            <div class="list" id="patient-list">
+                <div class="list-item">
+                    <img src="./images/emily-pic.png" alt="">
+                    <div class="details">
+                        <h6>Emily Williams</h6>
+                        <p><span>Female</span>, <span>18</span></p>
+                    </div>
+                    <button>
+                        <img src="./images/more-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="list-item">
+                    <img src="./images/emily-pic.png" alt="">
+                    <div class="details">
+                        <h6>Emily Williams</h6>
+                        <p><span>Female</span>, <span>18</span></p>
+                    </div>
+                    <button>
+                        <img src="./images/more-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="list-item">
+                    <img src="./images/emily-pic.png" alt="">
+                    <div class="details">
+                        <h6>Emily Williams</h6>
+                        <p><span>Female</span>, <span>18</span></p>
+                    </div>
+                    <button>
+                        <img src="./images/more-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="list-item">
+                    <img src="./images/emily-pic.png" alt="">
+                    <div class="details">
+                        <h6>Emily Williams</h6>
+                        <p><span>Female</span>, <span>18</span></p>
+                    </div>
+                    <button>
+                        <img src="./images/more-icon.svg" alt="">
+                    </button>
+                </div>
+                <div class="list-item">
+                    <img src="./images/emily-pic.png" alt="">
+                    <div class="details">
+                        <h6>Emily Williams</h6>
+                        <p><span>Female</span>, <span>18</span></p>
+                    </div>
+                    <button>
+                        <img src="./images/more-icon.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <div class="main-container">
+                <div class="data">
+                    <h3>Diagnosis History</h3>
+                    <div class="chart">
+                        <div>
+                            <h3>Blood Pressure</h3>
+                            <canvas id="reportChart" width="700"></canvas>
+                        </div>
+                        <div id="customLegend" class="custom-legend">
+                            <div class="item">
+                                <div class="color-box" style="background-color: #E66FD2;"></div>
+                                <div class="label">Systolic</div>
+                                <div class="value">--</div>
+                                <div class="indicator">
+                                    --
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="color-box" style="background-color: #8C6FE6;"></div>
+                                <div class="label">Diastolic</div>
+                                <div class="value">--</div>
+                                <div class="indicator">
+                                    --
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vals">
+                        <div>
+                            <img src="./images/respiratory-icon.svg" alt="">
+                            <h4>Respiratory Rate</h4>
+                            <span id="respiratory-rate">-- bpm</span>
+                            <p><span></span><span id="respiratory-level">--</span></p>
+                        </div>
+                        <div>
+                            <img src="./images/temperature-icon.svg" alt="">
+                            <h4>Temperature</h4>
+                            <span id="temperature">--°F</span>
+                            <p><span></span><span id="temperature-level">--</span></p>
+                        </div>
+                        <div>
+                            <img src="./images/bpm-icon.svg" alt="">
+                            <h4>Heart Rate</h4>
+                            <span id="heart-rate">-- bpm</span>
+                            <p><span></span><span id="heart-rate-level">--</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-sec">
+                <div class="info">
+                    <div class="profile">
+                        <img id="profile-picture" src="./images/default-profile.png" alt="Profile Picture">
+                        <h3 id="profile-name">Patient Name</h3>
+                    </div>
+                    <div class="details">
+                        <div>
+                            <img src="./images/dob-icon.svg" alt="">
+                            <div>
+                                <h6>Date Of Birth</h6>
+                                <p id="dob">--</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./images/gender-icon.svg" alt="">
+                            <div>
+                                <h6>Gender</h6>
+                                <p id="gender">--</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./images/phone-icon.svg" alt="">
+                            <div>
+                                <h6>Contact Info.</h6>
+                                <p id="contact-info">--</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./images/phone-icon.svg" alt="">
+                            <div>
+                                <h6>Emergency Contacts</h6>
+                                <p id="emergency-contact">--</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./images/insuarance-icon.svg" alt="">
+                            <div>
+                                <h6>Insurance Provider</h6>
+                                <p id="insurance-provider">--</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button>Show All Information</button>
+                </div>
+                <div class="results"></div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
